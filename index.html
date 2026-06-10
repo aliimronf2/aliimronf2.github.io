@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Ali Imron — ML & Data</title>
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    .hero {
+      position: relative;
+      min-height: calc(100vh - 64px);
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      overflow: hidden;
+      padding: 5rem 2rem 4rem;
+      max-width: 900px;
+      margin: 0 auto;
+    }
+
+    .hero-eyebrow {
+      font-family: var(--mono);
+      font-size: 12px;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: var(--green);
+      margin-bottom: 1.25rem;
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+    }
+
+    .hero-eyebrow::before {
+      content: '';
+      display: block;
+      width: 32px;
+      height: 1px;
+      background: var(--green);
+    }
+
+    .hero h1 {
+      margin-bottom: 1.5rem;
+    }
+
+    .hero h1 span.accent {
+      color: var(--accent);
+      position: relative;
+    }
+
+    .hero-desc {
+      max-width: 560px;
+      color: var(--text-muted);
+      font-size: 1.05rem;
+      margin-bottom: 2.5rem;
+    }
+
+    .hero-actions {
+      display: flex;
+      gap: 1rem;
+      flex-wrap: wrap;
+    }
+
+    /* Blinking cursor */
+    .cursor {
+      display: inline-block;
+      width: 3px;
+      height: 1em;
+      background: var(--accent);
+      vertical-align: middle;
+      margin-left: 4px;
+      animation: blink 1s step-end infinite;
+    }
+    @keyframes blink { 50% { opacity: 0; } }
+
+    /* TERMINAL CARD */
+    .terminal {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 1.5rem;
+      font-family: var(--mono);
+      font-size: 13px;
+      color: var(--text-muted);
+      margin-top: 4rem;
+    }
+
+    .terminal-bar {
+      display: flex;
+      gap: 6px;
+      margin-bottom: 1.25rem;
+    }
+
+    .terminal-bar span {
+      width: 12px;
+      height: 12px;
+      border-radius: 50%;
+    }
+
+    .terminal-bar .t-red { background: #ff5f57; }
+    .terminal-bar .t-yellow { background: #febc2e; }
+    .terminal-bar .t-green { background: #28c840; }
+
+    .terminal-line { margin-bottom: 0.4rem; }
+    .terminal-line .prompt { color: var(--accent); }
+    .terminal-line .cmd { color: var(--text); }
+    .terminal-line .out { color: var(--green); }
+    .terminal-line .comment { color: var(--text-dim); }
+
+    /* STATS ROW */
+    .stats-row {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+      gap: 1rem;
+      margin-top: 4rem;
+    }
+
+    .stat-card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      padding: 1.25rem 1.5rem;
+      text-align: center;
+    }
+
+    .stat-card .stat-num {
+      font-family: var(--sans);
+      font-size: 2rem;
+      font-weight: 700;
+      color: var(--text);
+      letter-spacing: -0.03em;
+    }
+
+    .stat-card .stat-num span {
+      color: var(--accent);
+    }
+
+    .stat-card .stat-label {
+      font-family: var(--mono);
+      font-size: 10px;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      color: var(--text-dim);
+      margin-top: 0.25rem;
+    }
+
+    /* GLOW blobs */
+    .blob1 {
+      width: 500px; height: 500px;
+      background: rgba(79,142,247,0.07);
+      top: -100px; right: -150px;
+    }
+    .blob2 {
+      width: 300px; height: 300px;
+      background: rgba(124,58,237,0.06);
+      bottom: 0; left: -80px;
+    }
+  </style>
+</head>
+<body>
+  <div class="grid-bg"></div>
+
+  <nav>
+    <a href="index.html" class="logo"><img src="logo.png" alt="Ali Imron" /></a>
+    <ul>
+      <li><a href="index.html" class="active">Home</a></li>
+      <li><a href="blog.html">Blog</a></li>
+      <li><a href="projects.html">Projects</a></li>
+      <li><a href="cv.html">CV</a></li>
+      <li><a href="skills.html">Skills</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+  </nav>
+
+  <main>
+    <div class="hero">
+      <div class="glow-blob blob1"></div>
+      <div class="glow-blob blob2"></div>
+
+      <p class="hero-eyebrow">Machine Learning &amp; Data Science</p>
+      <h1>
+        Building models.<br>
+        Teaching machines.<br>
+        <span class="accent">Turning data into insight.<span class="cursor"></span></span>
+      </h1>
+      <p class="hero-desc">
+        I'm Ali Imron — educator turned data scientist. I build ML pipelines, create data-driven products,
+        and communicate complex patterns clearly. Based in Indonesia.
+      </p>
+      <div class="hero-actions">
+        <a href="projects.html" class="btn btn-primary">↗ View Projects</a>
+        <a href="cv.html" class="btn btn-outline">Download CV</a>
+      </div>
+
+      <div class="terminal">
+        <div class="terminal-bar">
+          <span class="t-red"></span>
+          <span class="t-yellow"></span>
+          <span class="t-green"></span>
+        </div>
+        <div class="terminal-line">
+          <span class="prompt">ali@ml:~$</span>
+          <span class="cmd"> python3 about_me.py</span>
+        </div>
+        <div class="terminal-line"><span class="out">{"name": "Ali Imron Filayaty Faqih",</span></div>
+        <div class="terminal-line"><span class="out">&nbsp;"role": "ML Engineer / Data Scientist",</span></div>
+        <div class="terminal-line"><span class="out">&nbsp;"background": "Computational Mathematics (UGM)",</span></div>
+        <div class="terminal-line"><span class="out">&nbsp;"stack": ["Python", "PostgreSQL", "Tableau", "Azure", "MongoDB"],</span></div>
+        <div class="terminal-line"><span class="out">&nbsp;"currently": "Open to new opportunities"}</span></div>
+        <div class="terminal-line" style="margin-top:0.75rem">
+          <span class="prompt">ali@ml:~$</span>
+          <span class="cmd"> <span class="cursor"></span></span>
+        </div>
+      </div>
+
+      <div class="stats-row">
+        <div class="stat-card">
+          <div class="stat-num">9<span>+</span></div>
+          <div class="stat-label">Years Teaching</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-num">5<span>K+</span></div>
+          <div class="stat-label">Students Managed</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-num">2<span>yr</span></div>
+          <div class="stat-label">ML Program</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-num">3<span>+</span></div>
+          <div class="stat-label">Certifications</div>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <footer>
+    <span>aliimronf2.github.io</span> &nbsp;·&nbsp; <span>Built with passion for data</span>
+  </footer>
+</body>
+</html>

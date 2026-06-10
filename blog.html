@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Blog — Ali Imron</title>
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    .page-header {
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 4rem 2rem 2rem;
+    }
+
+    .blog-grid {
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 0 2rem 5rem;
+      display: grid;
+      gap: 1.5rem;
+    }
+
+    .post-card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 2rem;
+      display: grid;
+      grid-template-columns: 1fr auto;
+      gap: 1rem;
+      text-decoration: none;
+      color: inherit;
+      transition: border-color 0.2s, transform 0.2s, box-shadow 0.2s;
+    }
+
+    .post-card:hover {
+      border-color: rgba(79,142,247,0.4);
+      transform: translateX(4px);
+      box-shadow: 0 4px 24px rgba(79,142,247,0.07);
+    }
+
+    .post-meta {
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+      margin-bottom: 0.75rem;
+      flex-wrap: wrap;
+    }
+
+    .post-date {
+      font-family: var(--mono);
+      font-size: 11px;
+      color: var(--text-dim);
+    }
+
+    .post-card h3 {
+      font-family: var(--sans);
+      font-size: 1.15rem;
+      font-weight: 600;
+      color: var(--text);
+      margin-bottom: 0.5rem;
+      line-height: 1.35;
+    }
+
+    .post-card p {
+      font-size: 13.5px;
+      color: var(--text-muted);
+      line-height: 1.65;
+    }
+
+    .post-arrow {
+      color: var(--text-dim);
+      font-size: 1.3rem;
+      align-self: center;
+      transition: color 0.2s, transform 0.2s;
+    }
+
+    .post-card:hover .post-arrow {
+      color: var(--accent);
+      transform: translateX(4px);
+    }
+
+    .coming-soon {
+      text-align: center;
+      padding: 4rem 2rem;
+      font-family: var(--mono);
+      font-size: 13px;
+      color: var(--text-dim);
+      border: 1px dashed var(--border);
+      border-radius: 12px;
+    }
+    .coming-soon .cs-icon { font-size: 2rem; margin-bottom: 1rem; }
+  </style>
+</head>
+<body>
+  <div class="grid-bg"></div>
+
+  <nav>
+    <a href="index.html" class="logo"><img src="logo.png" alt="Ali Imron" /></a>
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="blog.html" class="active">Blog</a></li>
+      <li><a href="projects.html">Projects</a></li>
+      <li><a href="cv.html">CV</a></li>
+      <li><a href="skills.html">Skills</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+  </nav>
+
+  <main>
+    <div class="page-header">
+      <p class="section-label">// writing</p>
+      <h2>Blog</h2>
+      <p style="max-width:520px;">Notes on machine learning, data engineering, math education, and lessons learned building real-world models.</p>
+    </div>
+
+    <div class="blog-grid">
+
+      <a href="#" class="post-card">
+        <div>
+          <div class="post-meta">
+            <span class="tag">Machine Learning</span>
+            <span class="post-date">Coming soon</span>
+          </div>
+          <h3>From Math Teacher to ML Engineer: What Transfers (and What Doesn't)</h3>
+          <p>Reflections on switching from teaching computational mathematics to building production ML pipelines — and how pedagogy shapes how I debug models.</p>
+        </div>
+        <span class="post-arrow">→</span>
+      </a>
+
+      <a href="#" class="post-card">
+        <div>
+          <div class="post-meta">
+            <span class="tag green">Data Engineering</span>
+            <span class="post-date">Coming soon</span>
+          </div>
+          <h3>ETL in Practice: Lessons from Building a Student Records Data Warehouse</h3>
+          <p>Managing 5,000+ student records taught me more about data quality than any course. Here's what I'd do differently with Talend and SQL.</p>
+        </div>
+        <span class="post-arrow">→</span>
+      </a>
+
+      <a href="#" class="post-card">
+        <div>
+          <div class="post-meta">
+            <span class="tag purple">Analytics</span>
+            <span class="post-date">Coming soon</span>
+          </div>
+          <h3>A/B Testing for Educators: How I Measured Teaching Effectiveness with Data</h3>
+          <p>Using statistical testing to evaluate whether a new curriculum change actually improved student outcomes — and what the data revealed.</p>
+        </div>
+        <span class="post-arrow">→</span>
+      </a>
+
+      <div class="coming-soon">
+        <div class="cs-icon">📝</div>
+        <div>More posts coming soon — follow along on <a href="https://www.linkedin.com/in/ali-imron-filayaty-faqih/" target="_blank" style="color:var(--accent);text-decoration:none;">LinkedIn</a></div>
+      </div>
+
+    </div>
+  </main>
+
+  <footer>
+    <span>aliimronf2.github.io</span> &nbsp;·&nbsp; <span>Built with passion for data</span>
+  </footer>
+</body>
+</html>

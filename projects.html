@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Projects — Ali Imron</title>
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    .page-header {
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 4rem 2rem 2rem;
+    }
+
+    .projects-grid {
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 0 2rem 5rem;
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(380px, 1fr));
+      gap: 1.5rem;
+    }
+
+    @media (max-width: 640px) {
+      .projects-grid { grid-template-columns: 1fr; }
+    }
+
+    .project-card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 1.75rem;
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+      transition: border-color 0.2s, transform 0.2s, box-shadow 0.2s;
+      text-decoration: none;
+      color: inherit;
+    }
+
+    .project-card:hover {
+      border-color: rgba(79,142,247,0.4);
+      transform: translateY(-3px);
+      box-shadow: 0 12px 32px rgba(79,142,247,0.08);
+    }
+
+    .project-icon {
+      width: 44px;
+      height: 44px;
+      background: var(--surface2);
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.3rem;
+    }
+
+    .project-card h3 {
+      font-family: var(--sans);
+      font-size: 1.05rem;
+      font-weight: 600;
+      color: var(--text);
+    }
+
+    .project-card p {
+      font-size: 13.5px;
+      color: var(--text-muted);
+      flex: 1;
+    }
+
+    .project-stack {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.4rem;
+      margin-top: auto;
+    }
+
+    .project-footer {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-top: 0.5rem;
+      padding-top: 1rem;
+      border-top: 1px solid var(--border);
+    }
+
+    .project-status {
+      font-family: var(--mono);
+      font-size: 10px;
+      color: var(--text-dim);
+      letter-spacing: 0.1em;
+    }
+
+    .project-status.wip { color: #febc2e; }
+    .project-status.done { color: var(--green); }
+
+    .proj-link {
+      font-family: var(--mono);
+      font-size: 12px;
+      color: var(--accent);
+      text-decoration: none;
+    }
+
+    .proj-link:hover { text-decoration: underline; }
+  </style>
+</head>
+<body>
+  <div class="grid-bg"></div>
+
+  <nav>
+    <a href="index.html" class="logo"><img src="logo.png" alt="Ali Imron" /></a>
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="blog.html">Blog</a></li>
+      <li><a href="projects.html" class="active">Projects</a></li>
+      <li><a href="cv.html">CV</a></li>
+      <li><a href="skills.html">Skills</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+  </nav>
+
+  <main>
+    <div class="page-header">
+      <p class="section-label">// work</p>
+      <h2>Projects</h2>
+      <p style="max-width:520px;">Selected data science and machine learning projects — from ETL pipelines to predictive models and analytics dashboards.</p>
+    </div>
+
+    <div class="projects-grid">
+
+      <div class="project-card">
+        <div class="project-icon">🧠</div>
+        <h3>Customer Churn Prediction Model</h3>
+        <p>Built a classification model to predict student drop-out risk using attendance, assignment completion, and engagement data. Achieved 87% accuracy with XGBoost.</p>
+        <div class="project-stack">
+          <span class="tag">Python</span>
+          <span class="tag">XGBoost</span>
+          <span class="tag">scikit-learn</span>
+          <span class="tag">Pandas</span>
+        </div>
+        <div class="project-footer">
+          <span class="project-status done">● Completed</span>
+          <a href="https://github.com/aliimronf2" target="_blank" class="proj-link">GitHub →</a>
+        </div>
+      </div>
+
+      <div class="project-card">
+        <div class="project-icon">📊</div>
+        <h3>Sales Performance Dashboard</h3>
+        <p>End-to-end analytics pipeline for a 120-school marketing campaign. ETL from raw sales data into PostgreSQL, visualized in Tableau with drill-down by region.</p>
+        <div class="project-stack">
+          <span class="tag">PostgreSQL</span>
+          <span class="tag">Tableau</span>
+          <span class="tag green">ETL</span>
+          <span class="tag green">Talend</span>
+        </div>
+        <div class="project-footer">
+          <span class="project-status done">● Completed</span>
+          <a href="https://github.com/aliimronf2" target="_blank" class="proj-link">GitHub →</a>
+        </div>
+      </div>
+
+      <div class="project-card">
+        <div class="project-icon">📚</div>
+        <h3>Student Progress Analytics System</h3>
+        <p>Automated reporting system for 5000+ student records: tracks attendance, grades, and learning velocity, generating weekly PDF summaries for branch managers.</p>
+        <div class="project-stack">
+          <span class="tag">Python</span>
+          <span class="tag">MongoDB</span>
+          <span class="tag purple">APIs</span>
+          <span class="tag">Excel</span>
+        </div>
+        <div class="project-footer">
+          <span class="project-status done">● Completed</span>
+          <a href="https://github.com/aliimronf2" target="_blank" class="proj-link">GitHub →</a>
+        </div>
+      </div>
+
+      <div class="project-card">
+        <div class="project-icon">🔬</div>
+        <h3>Big Data Exploration — Customer Analytics</h3>
+        <p>Capstone project for Data Analytics certification: explored large-scale retail data, performed segmentation using K-Means clustering, built full reporting pipeline.</p>
+        <div class="project-stack">
+          <span class="tag">Python</span>
+          <span class="tag">MySQL</span>
+          <span class="tag green">Big Data</span>
+          <span class="tag">Matplotlib</span>
+        </div>
+        <div class="project-footer">
+          <span class="project-status done">● Completed</span>
+          <a href="https://github.com/aliimronf2" target="_blank" class="proj-link">GitHub →</a>
+        </div>
+      </div>
+
+      <div class="project-card">
+        <div class="project-icon">⚙️</div>
+        <h3>Data Warehouse — ID/X Partners Internship</h3>
+        <p>Designed and implemented a data warehouse schema for financial data; built ETL pipelines with Talend, optimized for complex SQL analytical queries.</p>
+        <div class="project-stack">
+          <span class="tag green">ETL</span>
+          <span class="tag green">Talend</span>
+          <span class="tag">SQL</span>
+          <span class="tag purple">Data Warehouse</span>
+        </div>
+        <div class="project-footer">
+          <span class="project-status done">● Completed</span>
+          <a href="https://github.com/aliimronf2" target="_blank" class="proj-link">GitHub →</a>
+        </div>
+      </div>
+
+      <div class="project-card">
+        <div class="project-icon">🤖</div>
+        <h3>ML Pipeline — Pacmann Academy Capstone</h3>
+        <p>Full machine learning pipeline from data ingestion to model deployment: feature engineering, model selection, hyperparameter tuning, and evaluation framework.</p>
+        <div class="project-stack">
+          <span class="tag">Python</span>
+          <span class="tag purple">ML Pipeline</span>
+          <span class="tag">OOP</span>
+          <span class="tag">Google Sheets</span>
+        </div>
+        <div class="project-footer">
+          <span class="project-status wip">◌ In Progress</span>
+          <a href="https://github.com/aliimronf2" target="_blank" class="proj-link">GitHub →</a>
+        </div>
+      </div>
+
+    </div>
+  </main>
+
+  <footer>
+    <span>aliimronf2.github.io</span> &nbsp;·&nbsp; <span>Built with passion for data</span>
+  </footer>
+</body>
+</html>

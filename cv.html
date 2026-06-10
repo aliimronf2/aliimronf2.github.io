@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>CV — Ali Imron</title>
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    .page-header {
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 4rem 2rem 2rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-end;
+      flex-wrap: wrap;
+      gap: 1.5rem;
+    }
+
+    .cv-content {
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 0 2rem 5rem;
+    }
+
+    .cv-section-title {
+      font-family: var(--mono);
+      font-size: 11px;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: var(--text-dim);
+      margin: 2.5rem 0 1.25rem;
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+    }
+
+    .cv-section-title::after {
+      content: '';
+      flex: 1;
+      height: 1px;
+      background: var(--border);
+    }
+
+    /* Timeline */
+    .timeline {
+      display: flex;
+      flex-direction: column;
+      gap: 0;
+    }
+
+    .timeline-item {
+      display: grid;
+      grid-template-columns: 140px 1fr;
+      gap: 1.5rem;
+      position: relative;
+    }
+
+    .timeline-item::before {
+      content: '';
+      position: absolute;
+      left: 148px;
+      top: 24px;
+      bottom: -24px;
+      width: 1px;
+      background: var(--border);
+    }
+
+    .timeline-item:last-child::before { display: none; }
+
+    .timeline-date {
+      font-family: var(--mono);
+      font-size: 11px;
+      color: var(--text-dim);
+      padding-top: 1.75rem;
+      text-align: right;
+      line-height: 1.5;
+    }
+
+    .timeline-body {
+      padding: 1.5rem;
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      margin-bottom: 1rem;
+      position: relative;
+    }
+
+    .timeline-body::before {
+      content: '';
+      position: absolute;
+      left: -7px;
+      top: 20px;
+      width: 13px;
+      height: 13px;
+      background: var(--bg);
+      border: 2px solid var(--accent);
+      border-radius: 50%;
+    }
+
+    .timeline-company {
+      font-family: var(--mono);
+      font-size: 11px;
+      color: var(--accent);
+      margin-bottom: 0.35rem;
+      letter-spacing: 0.05em;
+    }
+
+    .timeline-role {
+      font-family: var(--sans);
+      font-weight: 600;
+      font-size: 1rem;
+      color: var(--text);
+      margin-bottom: 0.75rem;
+    }
+
+    .timeline-body ul {
+      padding-left: 1.2rem;
+      margin-top: 0.5rem;
+    }
+
+    .timeline-body ul li {
+      color: var(--text-muted);
+      font-size: 13.5px;
+      margin-bottom: 0.4rem;
+      line-height: 1.6;
+    }
+
+    /* Education card */
+    .edu-card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      padding: 1.5rem;
+      display: grid;
+      grid-template-columns: 1fr auto;
+      gap: 1rem;
+    }
+
+    .edu-card .edu-school {
+      font-family: var(--sans);
+      font-weight: 600;
+      font-size: 1rem;
+      color: var(--text);
+      margin-bottom: 0.25rem;
+    }
+
+    .edu-card .edu-degree {
+      color: var(--text-muted);
+      font-size: 13.5px;
+    }
+
+    .edu-card .edu-year {
+      font-family: var(--mono);
+      font-size: 12px;
+      color: var(--text-dim);
+      white-space: nowrap;
+    }
+
+    @media (max-width: 640px) {
+      .timeline-item { grid-template-columns: 1fr; }
+      .timeline-date { padding-top: 0; text-align: left; }
+      .timeline-item::before { display: none; }
+      .timeline-body::before { display: none; }
+    }
+  </style>
+</head>
+<body>
+  <div class="grid-bg"></div>
+
+  <nav>
+    <a href="index.html" class="logo"><img src="logo.png" alt="Ali Imron" /></a>
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="blog.html">Blog</a></li>
+      <li><a href="projects.html">Projects</a></li>
+      <li><a href="cv.html" class="active">CV</a></li>
+      <li><a href="skills.html">Skills</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+  </nav>
+
+  <main>
+    <div class="page-header">
+      <div>
+        <p class="section-label">// experience</p>
+        <h2>Curriculum Vitae</h2>
+      </div>
+      <a href="CV_-_Ali_Imron_Filayaty_Faqih.pdf" download class="btn btn-primary">↓ Download PDF</a>
+    </div>
+
+    <div class="cv-content">
+
+      <div class="cv-section-title">Professional Experience</div>
+
+      <div class="timeline">
+
+        <div class="timeline-item">
+          <div class="timeline-date">Aug 2023<br>Oct 2025</div>
+          <div class="timeline-body">
+            <div class="timeline-company">Kodland — Remote, Indonesia</div>
+            <div class="timeline-role">Python Tutor</div>
+            <ul>
+              <li>Delivered dynamic Python lessons with live coding demonstrations</li>
+              <li>Assessed assignments, provided targeted feedback, and collaborated to optimize course content</li>
+              <li>Analyzed student progress and attendance data to inform instructional strategies</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="timeline-item">
+          <div class="timeline-date">Jul 2023<br>Jun 2024</div>
+          <div class="timeline-body">
+            <div class="timeline-company">Brain Academy Center by Ruangguru — Probolinggo</div>
+            <div class="timeline-role">Branch Manager</div>
+            <ul>
+              <li>Directed marketing campaigns across 120 schools, increasing enrollment</li>
+              <li>Managed databases for sales, 5,000+ student records, and inventory</li>
+              <li>Oversaw classes, activities, and all branch operations</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="timeline-item">
+          <div class="timeline-date">Oct 2022<br>Jun 2023</div>
+          <div class="timeline-body">
+            <div class="timeline-company">Brain Academy Center by Ruangguru — Surabaya</div>
+            <div class="timeline-role">Senior Master Teacher Coach</div>
+            <ul>
+              <li>Conducted training workshops to enhance teacher skills and pedagogical techniques</li>
+              <li>Developed customized training programs aligned to each school's needs</li>
+              <li>Delivered engaging courses using cutting-edge technology platforms</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="timeline-item">
+          <div class="timeline-date">Mar 2022<br>Oct 2022</div>
+          <div class="timeline-body">
+            <div class="timeline-company">Brain Academy by Ruangguru — Remote, Indonesia</div>
+            <div class="timeline-role">Master Teacher Curriculum for Mathematics</div>
+            <ul>
+              <li>Designed lesson plans and worksheets for all Brain Academy branches</li>
+              <li>Produced high-quality exam materials for mathematics teachers</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="timeline-item">
+          <div class="timeline-date">Jul 2021<br>Feb 2022</div>
+          <div class="timeline-body">
+            <div class="timeline-company">Brain Academy Online by Ruangguru — Remote</div>
+            <div class="timeline-role">Master Teacher Mathematics</div>
+            <ul>
+              <li>Delivered engaging math lessons, focusing on clarity and communication</li>
+              <li>Conducted personalized SAT-style test preparation classes</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="timeline-item">
+          <div class="timeline-date">Jul 2016<br>Dec 2020</div>
+          <div class="timeline-body">
+            <div class="timeline-company">Neutron Yogyakarta — Yogyakarta</div>
+            <div class="timeline-role">Mathematics Tutor</div>
+            <ul>
+              <li>Prepared lesson materials for senior high school UTBK and college entrance exam preparation</li>
+              <li>Managed partnerships with other educational institutions</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="timeline-item">
+          <div class="timeline-date">Jul 2013<br>Dec 2014</div>
+          <div class="timeline-body">
+            <div class="timeline-company">Universitas Gadjah Mada</div>
+            <div class="timeline-role">Laboratory Teaching Assistant</div>
+            <ul>
+              <li>Lectured numerical computation and computational algebra using MATLAB</li>
+              <li>Guided undergraduate students on individual projects</li>
+            </ul>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="cv-section-title">Education</div>
+      <div class="edu-card">
+        <div>
+          <div class="edu-school">Universitas Gadjah Mada</div>
+          <div class="edu-degree">Bachelor's Degree in Computational and Applied Mathematics</div>
+          <div style="margin-top:0.75rem;display:flex;gap:0.5rem;flex-wrap:wrap;">
+            <span class="tag">MATLAB</span>
+            <span class="tag">Maple</span>
+            <span class="tag">Dynamic Systems</span>
+            <span class="tag">Computational Algebra</span>
+          </div>
+        </div>
+        <div class="edu-year">Sep 2011<br>Nov 2015</div>
+      </div>
+
+      <div class="cv-section-title">Certifications & Courses</div>
+
+      <div style="display:flex;flex-direction:column;gap:1rem;">
+        <div class="card" style="display:grid;grid-template-columns:1fr auto;gap:1rem;align-items:start;">
+          <div>
+            <div style="font-family:var(--mono);font-size:11px;color:var(--accent);margin-bottom:0.35rem;">Pacmann Academy</div>
+            <div style="font-family:var(--sans);font-weight:600;color:var(--text);margin-bottom:0.4rem;">Machine Learning Professional Program</div>
+            <p style="font-size:13.5px;">Python & OOP, Machine Learning, Business Analytics, PostgreSQL</p>
+          </div>
+          <div style="font-family:var(--mono);font-size:11px;color:var(--text-dim);white-space:nowrap;">Jul 2023<br>Jul 2025</div>
+        </div>
+
+        <div class="card" style="display:grid;grid-template-columns:1fr auto;gap:1rem;align-items:start;">
+          <div>
+            <div style="font-family:var(--mono);font-size:11px;color:var(--accent);margin-bottom:0.35rem;">Rakamin Academy × ID/X Partners</div>
+            <div style="font-family:var(--sans);font-weight:600;color:var(--text);margin-bottom:0.4rem;">Data Engineer Virtual Internship</div>
+            <p style="font-size:13.5px;">ETL, SQL, Data Warehouse, Talend</p>
+          </div>
+          <div style="font-family:var(--mono);font-size:11px;color:var(--text-dim);white-space:nowrap;">May 2023</div>
+        </div>
+
+        <div class="card" style="display:grid;grid-template-columns:1fr auto;gap:1rem;align-items:start;">
+          <div>
+            <div style="font-family:var(--mono);font-size:11px;color:var(--accent);margin-bottom:0.35rem;">Professional Academy Digitalent Scholarship</div>
+            <div style="font-family:var(--sans);font-weight:600;color:var(--text);margin-bottom:0.4rem;">Certified in Data Analytics using Python</div>
+            <p style="font-size:13.5px;">Python & OOP, Big Data Analytics, MySQL, Data Visualization</p>
+          </div>
+          <div style="font-family:var(--mono);font-size:11px;color:var(--text-dim);white-space:nowrap;">Mar–May 2022</div>
+        </div>
+      </div>
+
+    </div>
+  </main>
+
+  <footer>
+    <span>aliimronf2.github.io</span> &nbsp;·&nbsp; <span>Built with passion for data</span>
+  </footer>
+</body>
+</html>

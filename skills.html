@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Skills — Ali Imron</title>
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    .page-header {
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 4rem 2rem 2rem;
+    }
+
+    .skills-content {
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 0 2rem 5rem;
+    }
+
+    .skills-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(380px, 1fr));
+      gap: 1.5rem;
+      margin-bottom: 2.5rem;
+    }
+
+    @media (max-width: 640px) {
+      .skills-grid { grid-template-columns: 1fr; }
+    }
+
+    .skills-group {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 1.75rem;
+    }
+
+    .skills-group-title {
+      font-family: var(--mono);
+      font-size: 11px;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      color: var(--accent);
+      margin-bottom: 1.25rem;
+    }
+
+    .skill-item {
+      margin-bottom: 1rem;
+    }
+
+    .skill-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 0.35rem;
+    }
+
+    .skill-name {
+      font-family: var(--sans);
+      font-size: 13.5px;
+      font-weight: 500;
+      color: var(--text);
+    }
+
+    .skill-level {
+      font-family: var(--mono);
+      font-size: 10px;
+      color: var(--text-dim);
+    }
+
+    .skill-bar {
+      height: 4px;
+      background: var(--surface2);
+      border-radius: 2px;
+      overflow: hidden;
+    }
+
+    .skill-fill {
+      height: 100%;
+      border-radius: 2px;
+      background: linear-gradient(90deg, var(--accent), var(--accent2));
+      transition: width 1s ease;
+    }
+
+    .skill-fill.green {
+      background: linear-gradient(90deg, var(--green), var(--accent));
+    }
+
+    /* TOOLS TAG CLOUD */
+    .tools-cloud {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 1.75rem;
+    }
+
+    .tools-cloud-title {
+      font-family: var(--mono);
+      font-size: 11px;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      color: var(--accent);
+      margin-bottom: 1.25rem;
+    }
+
+    .tools-list {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.6rem;
+    }
+
+    .tool-chip {
+      display: flex;
+      align-items: center;
+      gap: 0.4rem;
+      background: var(--surface2);
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      padding: 0.45rem 0.85rem;
+      font-family: var(--sans);
+      font-size: 13px;
+      font-weight: 500;
+      color: var(--text);
+      transition: border-color 0.2s, color 0.2s;
+    }
+
+    .tool-chip:hover {
+      border-color: rgba(79,142,247,0.4);
+      color: var(--accent);
+    }
+
+    .tool-chip .icon { font-size: 15px; }
+
+    /* LANGUAGES */
+    .lang-row {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+      gap: 1rem;
+      margin-top: 1.5rem;
+    }
+
+    .lang-card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      padding: 1.25rem;
+    }
+
+    .lang-card .lang-name {
+      font-family: var(--sans);
+      font-weight: 600;
+      color: var(--text);
+      margin-bottom: 0.25rem;
+    }
+
+    .lang-card .lang-level {
+      font-family: var(--mono);
+      font-size: 11px;
+      color: var(--text-dim);
+    }
+  </style>
+</head>
+<body>
+  <div class="grid-bg"></div>
+
+  <nav>
+    <a href="index.html" class="logo"><img src="logo.png" alt="Ali Imron" /></a>
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="blog.html">Blog</a></li>
+      <li><a href="projects.html">Projects</a></li>
+      <li><a href="cv.html">CV</a></li>
+      <li><a href="skills.html" class="active">Skills</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+  </nav>
+
+  <main>
+    <div class="page-header">
+      <p class="section-label">// stack</p>
+      <h2>Skills</h2>
+      <p style="max-width:520px;">A combination of data science, engineering, and education skills built across 9+ years of hands-on work.</p>
+    </div>
+
+    <div class="skills-content">
+
+      <div class="skills-grid">
+
+        <div class="skills-group">
+          <div class="skills-group-title">Programming & Data</div>
+
+          <div class="skill-item">
+            <div class="skill-header"><span class="skill-name">Python</span><span class="skill-level">Advanced</span></div>
+            <div class="skill-bar"><div class="skill-fill" style="width:90%"></div></div>
+          </div>
+          <div class="skill-item">
+            <div class="skill-header"><span class="skill-name">SQL (PostgreSQL / MySQL)</span><span class="skill-level">Advanced</span></div>
+            <div class="skill-bar"><div class="skill-fill" style="width:85%"></div></div>
+          </div>
+          <div class="skill-item">
+            <div class="skill-header"><span class="skill-name">MongoDB</span><span class="skill-level">Intermediate</span></div>
+            <div class="skill-bar"><div class="skill-fill" style="width:65%"></div></div>
+          </div>
+          <div class="skill-item">
+            <div class="skill-header"><span class="skill-name">MATLAB</span><span class="skill-level">Proficient</span></div>
+            <div class="skill-bar"><div class="skill-fill" style="width:72%"></div></div>
+          </div>
+        </div>
+
+        <div class="skills-group">
+          <div class="skills-group-title">Machine Learning</div>
+
+          <div class="skill-item">
+            <div class="skill-header"><span class="skill-name">scikit-learn</span><span class="skill-level">Proficient</span></div>
+            <div class="skill-bar"><div class="skill-fill green" style="width:80%"></div></div>
+          </div>
+          <div class="skill-item">
+            <div class="skill-header"><span class="skill-name">Data Science Pipeline</span><span class="skill-level">Advanced</span></div>
+            <div class="skill-bar"><div class="skill-fill green" style="width:87%"></div></div>
+          </div>
+          <div class="skill-item">
+            <div class="skill-header"><span class="skill-name">A/B Testing & Statistics</span><span class="skill-level">Proficient</span></div>
+            <div class="skill-bar"><div class="skill-fill green" style="width:78%"></div></div>
+          </div>
+          <div class="skill-item">
+            <div class="skill-header"><span class="skill-name">Business Analytics</span><span class="skill-level">Proficient</span></div>
+            <div class="skill-bar"><div class="skill-fill green" style="width:75%"></div></div>
+          </div>
+        </div>
+
+        <div class="skills-group">
+          <div class="skills-group-title">Data Engineering</div>
+
+          <div class="skill-item">
+            <div class="skill-header"><span class="skill-name">ETL Pipelines</span><span class="skill-level">Proficient</span></div>
+            <div class="skill-bar"><div class="skill-fill" style="width:80%"></div></div>
+          </div>
+          <div class="skill-item">
+            <div class="skill-header"><span class="skill-name">Talend</span><span class="skill-level">Intermediate</span></div>
+            <div class="skill-bar"><div class="skill-fill" style="width:65%"></div></div>
+          </div>
+          <div class="skill-item">
+            <div class="skill-header"><span class="skill-name">Azure Data Studio</span><span class="skill-level">Intermediate</span></div>
+            <div class="skill-bar"><div class="skill-fill" style="width:60%"></div></div>
+          </div>
+          <div class="skill-item">
+            <div class="skill-header"><span class="skill-name">REST APIs</span><span class="skill-level">Proficient</span></div>
+            <div class="skill-bar"><div class="skill-fill" style="width:70%"></div></div>
+          </div>
+        </div>
+
+        <div class="skills-group">
+          <div class="skills-group-title">Visualization & Reporting</div>
+
+          <div class="skill-item">
+            <div class="skill-header"><span class="skill-name">Tableau</span><span class="skill-level">Proficient</span></div>
+            <div class="skill-bar"><div class="skill-fill green" style="width:78%"></div></div>
+          </div>
+          <div class="skill-item">
+            <div class="skill-header"><span class="skill-name">Excel / Google Sheets</span><span class="skill-level">Advanced</span></div>
+            <div class="skill-bar"><div class="skill-fill green" style="width:88%"></div></div>
+          </div>
+          <div class="skill-item">
+            <div class="skill-header"><span class="skill-name">Matplotlib / Seaborn</span><span class="skill-level">Proficient</span></div>
+            <div class="skill-bar"><div class="skill-fill green" style="width:75%"></div></div>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="tools-cloud">
+        <div class="tools-cloud-title">Tools & Technologies</div>
+        <div class="tools-list">
+          <div class="tool-chip"><span class="icon">🐍</span> Python</div>
+          <div class="tool-chip"><span class="icon">🗃️</span> PostgreSQL</div>
+          <div class="tool-chip"><span class="icon">🍃</span> MongoDB</div>
+          <div class="tool-chip"><span class="icon">☁️</span> Azure</div>
+          <div class="tool-chip"><span class="icon">📊</span> Tableau</div>
+          <div class="tool-chip"><span class="icon">📋</span> Excel</div>
+          <div class="tool-chip"><span class="icon">🔢</span> MATLAB</div>
+          <div class="tool-chip"><span class="icon">⚙️</span> Talend</div>
+          <div class="tool-chip"><span class="icon">🧮</span> scikit-learn</div>
+          <div class="tool-chip"><span class="icon">🔬</span> XGBoost</div>
+          <div class="tool-chip"><span class="icon">🐼</span> Pandas</div>
+          <div class="tool-chip"><span class="icon">📈</span> Matplotlib</div>
+          <div class="tool-chip"><span class="icon">🔗</span> REST APIs</div>
+          <div class="tool-chip"><span class="icon">🗂️</span> MySQL</div>
+          <div class="tool-chip"><span class="icon">📐</span> OOP</div>
+          <div class="tool-chip"><span class="icon">🧩</span> Google Sheets</div>
+        </div>
+      </div>
+
+      <div style="margin-top:1.5rem;">
+        <p class="section-label">// languages</p>
+        <div class="lang-row">
+          <div class="lang-card">
+            <div class="lang-name">Bahasa Indonesia</div>
+            <div class="lang-level">Native</div>
+          </div>
+          <div class="lang-card">
+            <div class="lang-name">English</div>
+            <div class="lang-level">Basic Conversation</div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </main>
+
+  <footer>
+    <span>aliimronf2.github.io</span> &nbsp;·&nbsp; <span>Built with passion for data</span>
+  </footer>
+</body>
+</html>
