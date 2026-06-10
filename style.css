@@ -94,50 +94,25 @@ nav ul li a.active {
 /* HAMBURGER BUTTON */
 .nav-toggle {
   display: none;
-  background: none;
+  background: transparent;
   border: 1px solid var(--border);
-  border-radius: 64px;
-  color: var(--text);
-  padding: 0.4rem 0.5rem;
+  color: var(--text-muted);
+  font-size: 18px;
+  width: 38px;
+  height: 38px;
+  border-radius: 8px;
   cursor: pointer;
-  font-size:1.2rem;
-  line-height: 1;
+  align-items: center;
+  justify-content: center;
+  transition: border-color 0.2s, color 0.2s;
+  flex-shrink: 0;
 }
 
-/* MOBILE */
-@media (max-width: 640pax) {
-  .nav-toggle {
-    display: block;
-  }
-
-  nav ul {
-    display: none;
-    position: absolute;
-    top: 64px;
-    left: 0;
-    right: 0;
-    flex-direction: column;
-    background: rgba(6,8,16,0.97);
-    border-bottom: 1px solid var(--border);
-    padding: 0.75rem 1rem;
-    gap: 0.25rem;
-  }
-
-  nav ul.open {
-    display: flex;
-  }
-
-  nav ul li a {
-    display: block;
-    padding: 0.65rem 1rem;
-    font-size: 12px;
-  }
-
-  .section {
-    padding: 3.5rem 1.25rem;
-  }
+.nav-toggle:hover {
+  border-color: var(--accent);
+  color: var(--accent);
 }
-  
+
 /* MAIN LAYOUT */
 main {
   position: relative;
@@ -281,4 +256,40 @@ footer {
   filter: blur(80px);
   pointer-events: none;
   z-index: 0;
+}
+
+/* MOBILE */
+@media (max-width: 640px) {
+  .nav-toggle {
+    display: inline-flex;
+  }
+
+  nav ul {
+    display: none;
+    flex-direction: column;
+    gap: 0;
+    position: absolute;
+    top: 64px;
+    left: 0;
+    right: 0;
+    background: rgba(6,8,16,0.97);
+    backdrop-filter: blur(16px);
+    border-bottom: 1px solid var(--border);
+    padding: 0.75rem 1.25rem 1rem;
+  }
+
+  nav ul.open {
+    display: flex;
+  }
+
+  nav ul li a {
+    display: block;
+    font-size: 12px;
+    padding: 0.65rem 0.85rem;
+    border-radius: 6px;
+  }
+
+  .section {
+    padding: 3.5rem 1.25rem;
+  }
 }
